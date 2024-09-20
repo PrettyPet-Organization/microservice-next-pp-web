@@ -3,7 +3,7 @@ import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import { ReactNode } from "react";
 import ChatBot from "./page/ChatBot";
-import { theme } from "../constants/theme";
+import { theme } from "@/app/constants/theme";
 
 export default function App({ children }: { children: ReactNode }) {
     return (

@@ -1,11 +1,14 @@
+'use client'
+
 import { Box, Typography } from "@mui/material"
 import Image from 'next/image';
 import iconChatBot from '@/assets/icons/icon_chat-bot.svg'
 import iconChevronUp from '@/assets/icons/icon_chevron_up.svg'
+import { theme } from "@/app/constants/theme";
 
 const ChatBot = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '20rem', height: 44, paddingInline: '1.25rem', bgcolor: 'warning.main' }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '20rem', height: 44, paddingInline: '1.25rem', bgcolor: theme.palette.warning.main }}>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Image
                     src={iconChatBot}

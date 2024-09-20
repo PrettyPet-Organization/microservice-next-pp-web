@@ -3,7 +3,7 @@
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import '@styles/globals.scss';
 
-import Logo from "@components/page/Logo";
+import Logo from "@components/page/logo/Logo";
 import AboutProject from "@components/page/AboutProject";
 import ButtonActions from "@components/page/ButtonActions";
 import { theme } from "../app/constants/theme";

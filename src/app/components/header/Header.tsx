@@ -1,5 +1,5 @@
 import { AppBar, Box, Link } from "@mui/material"
-import { theme } from "../../constants/theme"
+import { theme } from "@/app/constants/theme"
 import NavSocialLinks from "@components/header/NavSocialLinks"
 import VerticalSingleBorder from "@components/common/VerticalSingleBorder";
 import LinkToCreateProject from "@components/header/LinkToCreateProject";
