@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../../../fonts/FuturaPTBoldObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.circle-default-inner {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 18px;
+    background-color: #AD4D42;
+}
+
+.circle-default-outer {
+    width: 222px;
+    height: 222px;
+    border-radius: 50%;
+    border: 3px solid #AD4D42;
+    margin-top: 50px;
+    background-color: #F6E8CE;
+}
+
+.circle-primary {
+    width: 242px;
+    height: 242px;
+    border-radius: 50%;
+    background-color: #1A4870;
+}
+
+.logo {
+    background: url('../../../../assets/logo/logo.png');
+    background-size: cover;
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: 126px;
+}
