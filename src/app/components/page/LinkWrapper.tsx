@@ -2,11 +2,17 @@ import { Box, Link } from "@mui/material"
 import { ReactNode } from "react"
 
 enum Colors {
-    primary = 'primary.main',
-    default = 'background.default',
-    info = 'info.main'
+    primary = '#1A4870',
+    default = '#F6E8CE',
+    info = '#EE823D'
 }
-type Props = { children: ReactNode; icon?: JSX.Element; bgColor?: keyof typeof Colors; textColor?: keyof typeof Colors; iconBlockBgColor?: keyof typeof Colors }
+interface Props {
+    children: ReactNode;
+    icon?: JSX.Element;
+    bgColor?: keyof typeof Colors;
+    textColor?: keyof typeof Colors;
+    iconBlockBgColor?: keyof typeof Colors
+}
 
 const LinkWrapper = ({ children, icon, bgColor = 'default', textColor = 'primary', iconBlockBgColor = 'primary' }: Props) => {
 

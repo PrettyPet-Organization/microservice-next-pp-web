@@ -1,4 +1,4 @@
-import { Box } from "@mui/material"
+import { Box, Grid2 } from "@mui/material"
 import LinkWrapper from "./LinkWrapper"
 
 const iconChevronDown = <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,17 +8,23 @@ const iconChevronDown = <svg width="22" height="23" viewBox="0 0 22 23" fill="no
 
 const ButtonActions = () => {
     return (
-        <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-            <Box sx={{ display: 'flex', height: 56, }}>
-                <LinkWrapper icon={iconChevronDown}>Проекты</LinkWrapper>
-
-                <Box sx={{ display: 'flex', marginInline: '1.25rem' }}>
+        <Grid2 container spacing={3} justifyContent={'center'}>
+            <Grid2>
+                <Box sx={{ display: 'flex', height: 56, }}>
+                    <LinkWrapper icon={iconChevronDown}>Проекты</LinkWrapper>
+                </Box>
+            </Grid2>
+            <Grid2>
+                <Box sx={{ display: 'flex', height: 56, }}>
                     <LinkWrapper bgColor={'primary'} textColor="default">Принять участие</LinkWrapper>
                 </Box>
-
-                <LinkWrapper icon={iconChevronDown}>О платформе</LinkWrapper>
-            </Box>
-        </Box>
+            </Grid2>
+            <Grid2>
+                <Box sx={{ display: 'flex', height: 56, }}>
+                    <LinkWrapper icon={iconChevronDown}>О платформе</LinkWrapper>
+                </Box>
+            </Grid2>
+        </Grid2>
     )
 }
 

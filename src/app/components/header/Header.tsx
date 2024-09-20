@@ -1,5 +1,3 @@
-'use_client'
-
 import { AppBar, Box, Link } from "@mui/material"
 import { theme } from "../../constants/theme"
 import NavSocialLinks from "@components/header/NavSocialLinks"
@@ -28,13 +26,13 @@ const Header = () => {
         ...baseStyleHeaderLinks,
         justifyContent: 'center',
         width: '9rem',
-        bgcolor: 'background.default',
+        bgcolor: theme.palette.background.default,
     }
     const styleBtnReg = {
         ...baseStyleHeaderLinks,
         justifyContent: 'center',
         width: '11rem',
-        bgcolor: 'background.default',
+        bgcolor: theme.palette.background.default,
     }
 
     return (
@@ -44,7 +42,7 @@ const Header = () => {
                     border={`1px solid ${theme.palette.primary.main}`}
                     height={56}
                     component="nav"
-                    sx={{ backgroundColor: 'background.default' }}
+                    sx={{ backgroundColor: theme.palette.background.default }}
                 >
                     <Box sx={styleWrapper}>
                         {/* иконки соц. сетей */}
@@ -52,7 +50,7 @@ const Header = () => {
                             <NavSocialLinks />
                         </Box>
 
-                        <Box sx={{ display: 'flex', justifyContent: 'center', height: '100%', width: '33%', bgcolor: 'background.default' }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', height: '100%', width: '33%', bgcolor: theme.palette.background.default }}>
                             <Box sx={{ display: 'flex', bgcolor: '#1A4870' }}>
                                 <LinkToCreateProject>Создать проект</LinkToCreateProject>
                             </Box>
@@ -77,13 +75,13 @@ const Header = () => {
                                 <VerticalSingleBorder />
 
                                 <Box sx={styleBtnLogin}>
-                                    <Link underline="none">Вход</Link>
+                                    <Link underline="none" color={theme.palette.primary.main}>Вход</Link>
                                 </Box>
 
                                 <VerticalSingleBorder />
 
                                 <Box sx={styleBtnReg}>
-                                    <Link underline="none">Регистрация</Link>
+                                    <Link underline="none" color={theme.palette.primary.main}>Регистрация</Link>
                                 </Box>
                             </Box>
                         </Box>

@@ -1,7 +1,9 @@
 import { Box, Link } from "@mui/material";
 import { ReactNode } from "react";
 
-type Props = { children: ReactNode }
+interface Props {
+    children: ReactNode
+}
 
 const LinkToCreateProject = ({ children }: Props) => {
     return (

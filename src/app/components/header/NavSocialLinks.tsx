@@ -5,6 +5,7 @@ import iconTg from '@/assets/icons/icon_tg.svg'
 import iconInsta from '@/assets/icons/icon_insta.svg'
 import iconMail from '@/assets/icons/icon_mail.svg'
 import VerticalSingleBorder from "@components/common/VerticalSingleBorder";
+import { theme } from "@/app/constants/theme";
 
 const baseStyleHeaderLinks = {
     display: 'flex',
@@ -16,7 +17,7 @@ const styleThemeSwither = {
     ...baseStyleHeaderLinks,
     justifyContent: 'center',
     width: 56,
-    bgcolor: 'primary.main',
+    bgcolor: theme.palette.primary.main,
 }
 
 const NavSocialLinks = () => {

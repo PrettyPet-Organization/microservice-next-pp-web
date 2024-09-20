@@ -1,6 +1,8 @@
-import { Typography } from "@mui/material"
-import { Box, Container } from "@mui/system"
+import { Grid2, Typography, Box, Container } from "@mui/material"
 import LinkWrapper from "../page/LinkWrapper"
+import ImageArrowsDecor from "@components/common/ImageArrowsDecor"
+import ImageArrowsDecorWrapper from "@components/footer/ImageArrowsDecorWrapper"
+import { theme } from "@/app/constants/theme"
 
 const iconPlus = <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
     xmlns="http://www.w3.org/2000/svg">
@@ -14,21 +16,23 @@ const iconChevronDown = <svg width="22" height="23" viewBox="0 0 22 23" fill="no
 
 const Footer = () => {
     return (
-        <Box component="footer" sx={{ p: 2, marginTop: 'auto', bgcolor: 'primary.main' }}>
+        <Box component="footer" sx={{ p: 2, marginTop: 'auto', bgcolor: theme.palette.primary.main }}>
 
             {/* разделитель */}
             <div className="spacer-vertical"></div>
 
             <Container sx={{ display: 'flex', flexDirection: 'column' }}>
-                <Box sx={{ display: 'flex', width: '100%' }}>
-                    <Typography variant="h2" sx={{ fontSize: '5rem', fontFamily: 'Futura PT', lineHeight: '7rem', color: 'background.default' }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                    <Typography variant="h2" sx={{ fontSize: '5rem', fontFamily: 'Futura PT', lineHeight: '7rem', color: theme.palette.background.default }}>
                         О платформе
                     </Typography>
+
+
+                    <ImageArrowsDecor />
                 </Box>
 
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Box sx={{ display: 'flex', alignItems: 'end' }}>
-
+                <Grid2 container spacing={2}>
+                    <Grid2 size={{ lg: 6, xl: 6, md: 12 }} sx={{ display: 'flex', alignItems: 'end' }}>
                         <Box sx={{ display: 'flex', height: 56, }}>
                             <LinkWrapper icon={iconChevronDown} iconBlockBgColor={'default'}>Проекты</LinkWrapper>
 
@@ -36,10 +40,9 @@ const Footer = () => {
                                 <LinkWrapper icon={iconPlus} bgColor={'info'} iconBlockBgColor={'info'} textColor="default">Создать проект</LinkWrapper>
                             </Box>
                         </Box>
+                    </Grid2>
 
-                    </Box>
-
-                    <Box sx={{ width: '50%', color: 'background.default' }}>
+                    <Grid2 size={{ lg: 6, xl: 6, md: 12 }} sx={{ color: theme.palette.background.default }}>
                         <p style={{ marginBottom: '1.13rem' }}>
                             Pretty Pet - это платформа, которая помогает воплотить идеи в жизни и пополнить своё портфолио интересными проектами.
                             <br />
@@ -54,8 +57,10 @@ const Footer = () => {
                             Если ты хочешь получить практический опыт разработки, дизайна или просто опыт работы в команде, заходи в {'\"Каталог проектов\"'}
                             и выбери тот проект, который подходит именно тебе
                         </p>
-                    </Box>
-                </Box>
+                    </Grid2>
+                </Grid2>
+
+                <ImageArrowsDecorWrapper />
             </Container >
         </Box >
     )

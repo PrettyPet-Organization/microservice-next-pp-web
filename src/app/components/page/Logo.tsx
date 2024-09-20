@@ -11,7 +11,7 @@ const Logo = () => {
             <div className="spacer-horizontal"></div>
             <div className="logo"></div>
 
-            <div className="circle-primary bg-primary"></div>
+            <div className="circle-primary"></div>
         </Box>
     )
 }
