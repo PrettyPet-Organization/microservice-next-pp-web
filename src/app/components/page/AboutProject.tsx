@@ -4,7 +4,7 @@ import { useMediaQuery } from "@mui/system"
 
 const AboutProject = () => {
     const isMediaQueryMatch = useMediaQuery('(min-width:1199px)');
-    const h1Style = { fontSize: isMediaQueryMatch ? '210px' : '150px', fontFamily: 'Futura PT', lineHeight: isMediaQueryMatch ? '269.22px' : '200px', color: 'primary.main' }
+    const h1Style = { fontSize: isMediaQueryMatch ? '210px' : '150px', lineHeight: isMediaQueryMatch ? '269.22px' : '200px', color: 'primary.main' }
 
     return (
         <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>

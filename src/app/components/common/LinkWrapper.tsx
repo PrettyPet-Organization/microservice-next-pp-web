@@ -9,14 +9,16 @@ enum Colors {
 interface Props {
     children: ReactNode;
     icon?: JSX.Element;
+    width?: string;
     bgColor?: keyof typeof Colors;
     textColor?: keyof typeof Colors;
     iconBlockBgColor?: keyof typeof Colors
+    borderColor?: keyof typeof Colors
 }
 
-const LinkWrapper = ({ children, icon, bgColor = 'default', textColor = 'primary', iconBlockBgColor = 'primary' }: Props) => {
+const LinkWrapper = ({ children, icon, bgColor = 'default', textColor = 'primary', iconBlockBgColor = 'primary', borderColor = 'primary', width = '14rem' }: Props) => {
 
-    const linkStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: Colors[bgColor], width: '14rem', border: 1 }
+    const linkStyle = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: Colors[bgColor], width, border: 1, borderColor: Colors[borderColor] }
     const textStyle = { color: Colors[textColor], width: icon ? '75%' : '100%', textAlign: 'center' }
 
     return (

@@ -1,34 +1,29 @@
 'use client'
 
-import { Box, CssBaseline, ThemeProvider } from "@mui/material";
-import '@styles/globals.scss';
+import { Box } from "@mui/material";
 
 import Logo from "@components/page/logo/Logo";
 import AboutProject from "@components/page/AboutProject";
 import ButtonActions from "@components/page/ButtonActions";
-import { theme } from "../app/constants/theme";
 
 export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Box sx={{ bgcolor: 'background.default' }}>
+    <Box sx={{ bgcolor: 'background.default' }}>
 
-        {/* разделитель */}
-        <div className="spacer-vertical"></div>
+      {/* малый разделитель */}
+      <div className="sm-spacer-vertical"></div>
 
-        {/* лого */}
-        <Logo />
+      {/* лого */}
+      <Logo />
 
-        {/* о проекте */}
-        <AboutProject />
+      {/* о проекте */}
+      <AboutProject />
 
-        {/* малый разделитель */}
-        <div className="sm-spacer-vertical"></div>
+      {/* малый разделитель */}
+      <div className="sm-spacer-vertical"></div>
 
-        {/* кнопки */}
-        <ButtonActions />
-      </Box>
-    </ThemeProvider>
+      {/* кнопки */}
+      <ButtonActions />
+    </Box>
   );
 }

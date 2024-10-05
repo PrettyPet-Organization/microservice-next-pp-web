@@ -23,17 +23,19 @@ export const theme = createTheme({
     },
 
     typography: {
-        fontFamily: '"Montserrat"',
+        fontFamily: 'Montserrat',
         h1: {
-            fontSize: '2rem',
+            fontSize: '5rem',
             fontWeight: 700,
-            lineHeight: '1.5rem',
+            lineHeight: '7rem',
+            fontFamily: 'Futura PT',
         },
 
         h2: {
-            fontSize: '1.5rem',
-            fontWeight: 600,
-            lineHeight: '1.4rem',
+            fontSize: '2.2rem',
+            fontWeight: 400,
+            lineHeight: '2.8rem',
+            fontFamily: 'Futura PT',
         },
 
         h3: {
@@ -52,6 +54,6 @@ export const theme = createTheme({
             fontSize: '1rem',
             fontWeight: 400,
             lineHeight: '1.2rem',
-        }
+        },
     },
 });
