@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../app/fonts/FuturaPTBoldObl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+.spacer-horizontal {
+    margin-inline: 8px;
+}
+
+.spacer-vertical {
+    display: flex;
+    margin: 50px auto 50px auto;
+}
+
+.sm-spacer-vertical {
+    display: flex;
+    margin: 25px auto 25px auto;
+}

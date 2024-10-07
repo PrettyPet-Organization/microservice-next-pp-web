@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import '@styles/app.style.scss';
 import { Montserrat } from 'next/font/google'
 import App from "@components/App";
+import { theme } from "@/app/constants/theme";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 const montserrat = Montserrat({ subsets: ['cyrillic'] });
 
@@ -17,8 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={montserrat.className}>
+      <body style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: theme.palette.background.default }} className={montserrat.className}>
+        <Header />
+
         <App>{children}</App>
+
+        <Footer />
       </body>
     </html>
   );

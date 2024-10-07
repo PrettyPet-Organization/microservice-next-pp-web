@@ -1,25 +1,28 @@
-import { Box, Container } from "@mui/material";
-import Header from "./header/Header";
-import Footer from "./footer/Footer";
+'use client'
+
+import { Box, Container, CssBaseline, ThemeProvider } from "@mui/material";
 import { ReactNode } from "react";
 import ChatBot from "./page/ChatBot";
-import { theme } from "@/app/constants/theme";
+import { theme } from "../constants/theme";
 
 export default function App({ children }: { children: ReactNode }) {
     return (
-        <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: theme.palette.background.default }}>
-            <Header />
+        <>
+            <CssBaseline />
 
-            <Container>
-                {children}
+            {/* малый разделитель */}
+            <div className="sm-spacer-vertical"></div>
+
+            <Container style={{ minHeight: '300px' }}>
+                <ThemeProvider theme={theme}>
+                    {children}
+                </ThemeProvider>
             </Container>
 
             {/* чат-бот */}
             <Box sx={{ display: 'flex', justifyContent: 'end' }}>
                 <ChatBot />
             </Box>
-
-            <Footer />
-        </main>
+        </>
     )
 }

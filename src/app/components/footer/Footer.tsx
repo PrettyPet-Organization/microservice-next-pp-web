@@ -1,5 +1,5 @@
 import { Grid2, Typography, Box, Container } from "@mui/material"
-import LinkWrapper from "../page/LinkWrapper"
+import LinkWrapper from "@/app/components/common/LinkWrapper"
 import ImageArrowsDecor from "@components/common/ImageArrowsDecor"
 import ImageArrowsDecorWrapper from "@components/footer/ImageArrowsDecorWrapper"
 import { theme } from "@/app/constants/theme"
@@ -9,7 +9,7 @@ const iconPlus = <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
     <path d="M19 12.998H13V18.998H11V12.998H5V10.998H11V4.99805H13V10.998H19V12.998Z" fill="#F6E8CE" />
 </svg>
 
-const iconChevronDown = <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+const iconArrowDown = <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M11.0837 0.999715L11.0837 22.3535M11.0837 22.3535L21.1675 12.2698M11.0837 22.3535L1 12.2698"
         stroke="#1A4870" strokeLinecap="round" strokeLinejoin="round" />
 </svg>
@@ -23,7 +23,7 @@ const Footer = () => {
 
             <Container sx={{ display: 'flex', flexDirection: 'column' }}>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-                    <Typography variant="h2" sx={{ fontSize: '5rem', fontFamily: 'Futura PT', lineHeight: '7rem', color: theme.palette.background.default }}>
+                    <Typography component={'h2'} variant="h1" sx={{ fontFamily: 'Futura PT', color: theme.palette.background.default }}>
                         О платформе
                     </Typography>
 
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Grid2 container spacing={2}>
                     <Grid2 size={{ lg: 6, xl: 6, md: 12 }} sx={{ display: 'flex', alignItems: 'end' }}>
                         <Box sx={{ display: 'flex', height: 56, }}>
-                            <LinkWrapper icon={iconChevronDown} iconBlockBgColor={'default'}>Проекты</LinkWrapper>
+                            <LinkWrapper icon={iconArrowDown} iconBlockBgColor={'default'}>Проекты</LinkWrapper>
 
                             <Box sx={{ display: 'flex', marginInline: '1.25rem' }}>
                                 <LinkWrapper icon={iconPlus} bgColor={'info'} iconBlockBgColor={'info'} textColor="default">Создать проект</LinkWrapper>
